@@ -29,11 +29,12 @@ ggplot(def_epa_r, aes(x = epa, y = plays))+
     title = "NFL Defensive Efficiency Against the Run (2025)",
     subtitle = "Defensive EPA Against the Run — Regular Season",
     x = "Defensive EPA Against the Run",
-    y = "Total Runs",
+    y = "Total Rushing Attempts",
     caption = "By Peyton Berger | Data: nflfastR"
   )+
   theme(plot.title = element_text(face = "bold", size = 14, hjust = 0.5))+
   theme(plot.subtitle = element_text(size = 12, hjust = 0.5))
 
 #Save Graph
+
 ggsave("SP_Def_Rush_Efficiency.png", width = 15, height = 10, dpi = "retina")
