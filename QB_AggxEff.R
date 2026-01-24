@@ -28,7 +28,8 @@ ggplot(qbs)+
     title = "QB Aggressiveness vs Efficiency on Completed Passes in 2025",
     subtitle = "Min 100 Completions - Regular Season",
     x = "Air Yards",
-    y = "QB EPA per Completed Pass"
+    y = "QB EPA per Completed Pass",
+    caption = "By Peyton Berger | Data: nflfastR"
   )+
   theme(plot.title = element_text(face = "bold", size = 14, hjust = 0.5))+
   theme(plot.subtitle = element_text(size = 12, hjust = 0.5))
@@ -37,3 +38,4 @@ ggplot(qbs)+
 #Save Scatterplot
 
 ggsave("SP_QB_AggxEff.png", width = 15, height = 10, dpi = "retina")
+
