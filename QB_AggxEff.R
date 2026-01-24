@@ -26,7 +26,7 @@ ggplot(qbs)+
   theme_bw()+
   labs(
     title = "QB Aggressiveness vs Efficiency on Completed Passes in 2025",
-    subtitle = "Min 100 Attempts - Regular Season",
+    subtitle = "Min 100 Completions - Regular Season",
     x = "Air Yards",
     y = "QB EPA per Completed Pass"
   )+
@@ -35,4 +35,5 @@ ggplot(qbs)+
 
 
 #Save Scatterplot
+
 ggsave("SP_QB_AggxEff.png", width = 15, height = 10, dpi = "retina")
