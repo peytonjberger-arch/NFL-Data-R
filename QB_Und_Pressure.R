@@ -31,7 +31,8 @@ ggplot(qbs)+
     title = "QB Performance Under Pressure in 2025",
     subtitle = "Min 100 Dropbacks - Regular Season",
     x = "Epa per Dropback",
-    y = "Pressure Rate"
+    y = "Pressure Rate",
+    caption = "By Peyton Berger | Data: nflfastR"
   )+
   theme(plot.title = element_text(face = "bold", size = 14, hjust = 0.5))+
   theme(plot.subtitle = element_text(size = 12, hjust = 0.5))
@@ -39,3 +40,4 @@ ggplot(qbs)+
 
 #Save Scatterplot
 ggsave("SP_QB_Und_Pressure.png", width = 15, height = 10, dpi = "retina")
+
