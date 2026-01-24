@@ -42,7 +42,8 @@ ggplot(qbs_downs)+
     title = "QB Early Downs vs Late Downs EPA in 2025",
     subtitle = "Min 100 Dropbacks - Regular Season",
     x = "Epa per Dropback on Early Downs",
-    y = "Epa per Dropback on Late Downs"
+    y = "Epa per Dropback on Late Downs",
+    caption = "By Peyton Berger | Data: nflfastR"
   )+
   theme(plot.title = element_text(face = "bold", size = 14, hjust = 0.5))+
   theme(plot.subtitle = element_text(size = 12, hjust = 0.5))
@@ -53,4 +54,5 @@ ggsave("SP_EPA_ExL.png", width = 15, height = 10, dpi = "retina")
   
   
   
+
   
