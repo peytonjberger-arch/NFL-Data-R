@@ -1,4 +1,5 @@
 library(nflreadr)
+library(nflfastR)
 library(tidyverse)
 library(gt)
 library(gtExtras)
@@ -127,3 +128,4 @@ dtbl <- covrates %>%
 
 #Save Scatterplot
 ggsave(dtbl, "GT_ARI_Cov.png")
+
