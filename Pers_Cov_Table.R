@@ -2,6 +2,7 @@ library(nflreadr)
 library(tidyverse)
 library(gt)
 library(gtExtras)
+library(webshot2)
 
 
 
@@ -48,7 +49,7 @@ formations <- pbp_personnel %>%
 
 
 
-formations %>% 
+otbl <- formations %>% 
   ungroup() %>% 
   filter(posteam == "ARI") %>% # Change posteam for whatever team you want to see
   select(team_wordmark, personnel, Plays, EPA, Success, YPP) %>% 
@@ -67,7 +68,7 @@ formations %>%
   )
 
 #Save Scatterplot
-ggsave("GT_ARI_Pers.png", width = 15, height = 10, dpi = "retina")
+ggsave(otbl, "GT_ARI_Pers.png")
 
 
 
@@ -106,7 +107,7 @@ covrates <- pbp_coverage %>%
 
 
 
-covrates %>%
+dtbl <- covrates %>%
   ungroup() %>% 
   filter(defteam == "ARI") %>% # Change defteam for whatever team you want to see
   select(team_wordmark, defense_coverage_type, Plays, EPA, Success, YPP) %>% 
@@ -125,4 +126,4 @@ covrates %>%
   tab_caption(caption = "By Peyton Berger | Data: FTN Data via nflverse")
 
 #Save Scatterplot
-ggsave("GT_ARI_Cov.png", width = 15, height = 10, dpi = "retina")
+ggsave(dtbl, "GT_ARI_Cov.png")
